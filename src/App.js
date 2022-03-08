@@ -37,18 +37,20 @@ function App() {
   <div className="App">
       
       <h1> IronContacts </h1>
-      <button onClick={handleAddContact}>Add Random Contact</button>
-      <button onClick={handleSortByName}>Sort by Name</button>
-      <button onClick={handleSortByPop}>Sort by Popularity</button>
+      <div id='btn-padding' class="btn-group" role="group" aria-label="Basic mixed styles example">
+        <button onClick={handleAddContact} type="button" class="btn btn-danger">Add Random Contact</button>
+        <button onClick={handleSortByName} type="button" class="btn btn-warning">Sort by Name</button>
+        <button onClick={handleSortByPop} type="button" class="btn btn-success">Sort by Popularity</button>
+      </div>
       
-      <table>
+      <table class="table">
           <tr>
-            <th>Picture</th>
-            <th>Name</th>
-            <th>Popularity</th>
-            <th>Won Oscar</th>
-            <th>Won Emmy</th>
-            <th>Actions</th>
+            <th scope="col">Picture</th>
+            <th scope="col">Name</th>
+            <th scope="col">Popularity</th>
+            <th scope="col">Won Oscar</th>
+            <th scope="col">Won Emmy</th>
+            <th scope="col">Actions</th>
           </tr>
         
           {contacts.map((eachContact, index)=>{
@@ -65,8 +67,7 @@ function App() {
           })}
       </table>
   </div>
-  ) 
-  
+  )   
 }
 
 export default App;

@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+#btn-padding {
+  padding: 60px 0px;
+}
+
+h1 {
+  font-size: 100px;
+  color:violet;
+  font-weight: bold;
+  text-shadow: 7px 4px 5px black;
+}
