@@ -15,7 +15,7 @@ function App() {
 
   const handleSortByName = () => {
     const contactsCopy = [...contacts]
-    contactsCopy.sort((elem1, elem2)=> elem1.name > elem2.name ? 1 : -1 )    
+    contactsCopy.sort((contact1, contact2)=> contact1.name > contact2.name ? 1 : -1 )    
     setContacts(contactsCopy)
   }
 
@@ -57,8 +57,8 @@ function App() {
             <td> <img src={eachContact.pictureUrl} alt="{eachContact.name}" width="100px" /></td>
             <td>{eachContact.name}</td>
             <td>{Math.round(eachContact.popularity*100)/100}</td>
-            {eachContact.wonOscar ? <td>🏆</td> : <td></td> }
-            {eachContact.wonEmmy ? <td>⭐</td> : <td></td> }
+            <td>{eachContact.wonOscar ? "🏆" : ""}</td>
+            <td>{eachContact.wonEmmy ? "⭐" : ""}</td>
             <td><button onClick={() => handleDeleteContact(index)}>Delete</button></td>            
           </tr> 
           )
